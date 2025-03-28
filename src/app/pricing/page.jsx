@@ -365,7 +365,7 @@ function FrequentlyAskedQuestions() {
               Bagaimana cara memulai?
             </dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
-              Pilih paket yang sesuai dengan kebutuhan Anda dan klik tombol "Hubungi via WhatsApp". Tim kami akan menghubungi Anda untuk langkah selanjutnya. Serahkan semua pada kami! Anda tinggal terima beres video pendek siap upload.
+              Pilih paket yang sesuai dengan kebutuhan Anda dan klik tombol &quot;Hubungi via WhatsApp&quot;. Tim kami akan menghubungi Anda untuk langkah selanjutnya. Serahkan semua pada kami! Anda tinggal terima beres video pendek siap upload.
             </dd>
           </dl>
         </div>
