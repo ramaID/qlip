@@ -22,43 +22,60 @@ const tiers = [
     name: 'Paket Hemat',
     slug: 'hemat',
     description: 'Cocok untuk test pasar',
-    priceMonthly: 525000,
+    priceMonthly: 340000,
     href: 'https://wa.me/6281393612896?text=Halo%20Qlip,%20saya%20tertarik%20dengan%20Paket%20Hemat',
     highlights: [
-      { description: '35 video pendek' },
+      { description: '20 video pendek' },
       { description: 'Durasi maksimal 3 menit' },
-      { description: 'Judul & deskripsi AI optimized' },
-      { description: 'Hashtag hasil riset AI' },
+      { description: 'Judul AI optimized' },
     ],
     features: [
-      { section: 'Video', name: 'Jumlah video', value: '35' },
-      { section: 'Video', name: 'Harga per video', value: '15.000' },
+      { section: 'Video', name: 'Jumlah video', value: '20' },
+      { section: 'Video', name: 'Harga per video', value: '17.000' },
       { section: 'Video', name: 'Durasi maksimal', value: '3 menit' },
-      { section: 'Konten', name: 'Judul & deskripsi AI', value: true },
-      { section: 'Konten', name: 'Hashtag hasil riset', value: true },
-      { section: 'Support', name: 'Konsultasi via WhatsApp', value: true },
+      { section: 'Konten', name: 'Judul AI', value: true },
+      { section: 'Konten', name: 'Deskripsi AI', value: false },
+      { section: 'Konten', name: 'Hashtag hasil riset', value: false },
     ],
   },
   {
     name: 'Paket Standar',
     slug: 'standar',
     description: 'Cocok untuk pengembangan channel',
-    priceMonthly: 1000000,
+    priceMonthly: 700000,
     href: 'https://wa.me/6281393612896?text=Halo%20Qlip,%20saya%20tertarik%20dengan%20Paket%20Standar',
     highlights: [
-      { description: '80 video pendek' },
+      { description: '50 video pendek' },
       { description: 'Durasi maksimal 3 menit' },
       { description: 'Judul & deskripsi AI optimized' },
-      { description: 'Hashtag hasil riset AI' },
     ],
     features: [
-      { section: 'Video', name: 'Jumlah video', value: '80' },
-      { section: 'Video', name: 'Harga per video', value: '12.500' },
+      { section: 'Video', name: 'Jumlah video', value: '50' },
+      { section: 'Video', name: 'Harga per video', value: '14.000' },
       { section: 'Video', name: 'Durasi maksimal', value: '3 menit' },
-      { section: 'Konten', name: 'Judul & deskripsi AI', value: true },
+      { section: 'Konten', name: 'Judul AI', value: true },
+      { section: 'Konten', name: 'Deskripsi AI', value: true },
+      { section: 'Konten', name: 'Hashtag hasil riset', value: false },
+    ],
+  },
+  {
+    name: 'Paket Premium',
+    slug: 'premium',
+    description: 'Cocok untuk konten kreator profesional',
+    priceMonthly: 900000,
+    href: 'https://wa.me/6281393612896?text=Halo%20Qlip,%20saya%20tertarik%20dengan%20Paket%20Premium',
+    highlights: [
+      { description: '90 video pendek' },
+      { description: 'Durasi maksimal 3 menit' },
+      { description: 'Judul, deskripsi, hashtag AI optimized' },
+    ],
+    features: [
+      { section: 'Video', name: 'Jumlah video', value: '90' },
+      { section: 'Video', name: 'Harga per video', value: '10.000' },
+      { section: 'Video', name: 'Durasi maksimal', value: '3 menit' },
+      { section: 'Konten', name: 'Judul AI', value: true },
+      { section: 'Konten', name: 'Deskripsi AI', value: true },
       { section: 'Konten', name: 'Hashtag hasil riset', value: true },
-      { section: 'Support', name: 'Konsultasi via WhatsApp', value: true },
-      { section: 'Support', name: 'Prioritas pengerjaan', value: true },
     ],
   }
 ]
@@ -80,7 +97,7 @@ function PricingCards() {
     <div className="relative py-24">
       <Gradient className="absolute inset-x-2 top-48 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset" />
       <Container className="relative">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:mx-24">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:mx-24">
           {tiers.map((tier, tierIndex) => (
             <PricingCard key={tierIndex} tier={tier} />
           ))}
@@ -106,12 +123,6 @@ function PricingCard({ tier }) {
                 maximumFractionDigits: 0,
               }).format(tier.priceMonthly)}
             </div>
-            <div className="text-sm/5 text-gray-950/75">
-              <p>per bulan</p>
-            </div>
-          </div>
-          <div className="mt-8">
-            <Button href={tier.href}>Hubungi via WhatsApp</Button>
           </div>
           <div className="mt-8">
             <h3 className="text-sm/6 font-medium text-gray-950">
@@ -199,13 +210,13 @@ function PricingTable({ selectedTier }) {
             </td>
             <td colSpan={3} className="p-0 text-right">
               <Button variant="outline" href={selectedTier.href}>
-                Get started
+                Hubungi via WhatsApp
               </Button>
             </td>
           </tr>
           <tr className="max-sm:hidden">
             <th className="p-0" scope="row">
-              <span className="sr-only">Get started</span>
+              <span className="sr-only">Hubungi via WhatsApp</span>
             </th>
             {tiers.map((tier) => (
               <td
@@ -214,7 +225,7 @@ function PricingTable({ selectedTier }) {
                 className="px-0 pt-4 pb-0 data-selected:table-cell max-sm:hidden"
               >
                 <Button variant="outline" href={tier.href}>
-                  Get started
+                  Hubungi via WhatsApp
                 </Button>
               </td>
             ))}

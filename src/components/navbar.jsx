@@ -8,8 +8,8 @@ import {
 import { Bars2Icon } from '@heroicons/react/24/solid'
 import { motion } from 'framer-motion'
 import { Link } from './link'
-import { Logo } from './logo'
 import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
+import { Heading } from './text'
 
 const links = [
   { href: '/pricing', label: 'Pricing' },
@@ -80,7 +80,7 @@ export function Navbar({ banner }) {
           <div className="relative flex gap-6">
             <PlusGridItem className="py-3">
               <Link href="/" title="Home">
-                <Logo className="h-9" />
+                <Heading as="h1">Qlip</Heading>
               </Link>
             </PlusGridItem>
             {banner && (

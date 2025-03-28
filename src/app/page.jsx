@@ -28,9 +28,6 @@ function Hero() {
             <Button href="https://wa.me/6281393612896?text=Halo%20Qlip,%20saya%20tertarik%20dengan%20jasa%20video%20pendek%20Anda.">
               Konsultasi Gratis via WhatsApp!
             </Button>
-            <Button variant="secondary" href="/portfolio">
-              Lihat Portfolio
-            </Button>
           </div>
         </div>
       </Container>
@@ -43,7 +40,7 @@ function ServicesSection() {
     <div className="overflow-hidden">
       <Container className="pb-24">
         <Heading as="h2" className="max-w-3xl">
-          Layanan Qlip: Solusi Video Pendek Lengkap
+          Layanan Qlip: Solusi Buat Video Pendek Murah
         </Heading>
         <p className="mt-6 max-w-2xl text-lg text-gray-600">
           Ubah konten panjang menjadi video pendek viral dengan teknologi AI kami yang canggih
@@ -65,7 +62,7 @@ function AboutUsSection() {
     <Container className="py-24">
       <Subheading>Tentang Kami</Subheading>
       <Heading as="h3" className="mt-2 max-w-3xl">
-        Qlip: AI-Powered Video Editing untuk Kesuksesan Kontenmu
+        Qlip: AI-Powered Video Creator untuk Kesuksesan Kontenmu
       </Heading>
 
       <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
