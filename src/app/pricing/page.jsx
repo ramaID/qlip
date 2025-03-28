@@ -17,6 +17,8 @@ export const metadata = {
     'Ubah video panjang jadi video pendek viral dengan AI! Qlip bantu buat judul, deskripsi, & hashtag. Paket fleksibel, harga mulai Rp500rb!',
 }
 
+export const runtime = 'edge'
+
 const tiers = [
   {
     name: 'Paket Hemat',
